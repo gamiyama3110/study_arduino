@@ -1,6 +1,23 @@
+/*
+ * RTCモジュール。
+ * DS3231が時計としての機能（RTC）を持ち、AT24C32（32K EEPROM）にRTCなどのデータが記録されている。
+ * データが消えないようにボタン電池で保持している。
+ * モジュールのVCCがボタン電池のプラスに繋がっているので、充電式ボタン電池を利用しないとダメっぽい。
+ * 
+ * | DS3231 | Arduino nano |
+ * | :-- | :-- |
+ * | 32K | NC |
+ * | SQW | NC |
+ * | SCL | A5 |
+ * | SDA | A4 |
+ * | VCC | 5V |
+ * | GND | GND |
+ * 
+ * 
+ */
+
 #include <Wire.h>
 #include <DS3231.h>
-#include <time.h>
 
 RTClib rtc;
 DS3231 ds_clock;

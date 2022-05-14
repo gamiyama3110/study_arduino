@@ -119,8 +119,6 @@ void dump(decode_results *results) {
   }
   Serial.println("\n end");
 
-//  free(results);
-//  free(count);
 }
 
 /*
